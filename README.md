@@ -36,3 +36,13 @@ Refresh the same site link after each successful deployment to test changes. The
 ## Commit identity
 
 Before committing, verify repository-local `user.name` is `nan0210hi` and `user.email` matches the identity used in the repository owner's initial commit. Verify **both author and committer** on the resulting commit before pushing. Do not rely on a machine's global Git identity.
+
+## School project gallery
+
+`school-projects.html` is an internal page, linked from the school section. Vite builds both HTML pages, including when the site is hosted under `/portfolio/`. GitHub and live-demo buttons open external destinations in a new tab.
+
+All current entries are placeholders. Ten school slots are provided; suggested technology labels describe plans, not completed skills or projects. Edit the entries and `schoolSlots` in `src/projects.js` to replace them with real work. Set `technologies` to the actual tools used (languages, frameworks, databases, or hosting tools); these generate the gallery filters automatically. Filters are also shareable through `?tech=Python`, for example.
+
+Use `cover: 'images/my-project.webp'` and a descriptive `coverAlt` for an actual project screenshot placed in `public/images/`. Add `contribution` to explain the code you personally wrote, technical decisions, and testing. Add `repo` for the full GitHub repository URL, `live` for a deployed demo URL, and `video` for a demo video as described above. Missing links display “coming soon” without fake destinations. Videos have controls and never autoplay. Keep `placeholder: true` and the placeholder status until the entry is replaced with real work.
+
+Preview the production build with `npm run preview -- --base=/portfolio/` so that its asset base matches the build.

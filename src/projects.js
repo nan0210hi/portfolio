@@ -39,3 +39,33 @@ export const projects = [
     video: '', repo: '', live: '',
   },
 ];
+
+// Suggested stacks describe empty portfolio slots, not completed work or skills.
+const schoolSlots = [
+  ['Web interface', ['HTML', 'CSS', 'JavaScript']],
+  ['Mobile application', ['Dart', 'Flutter']],
+  ['C# application', ['C#']],
+  ['Python exploration', ['Python']],
+  ['Database project', ['MySQL', 'SQL']],
+  ['Full-stack experiment', ['JavaScript', 'MySQL']],
+  ['Deployed web project', ['HTML', 'CSS', 'Vercel']],
+  ['Open-ended coursework', ['Other']],
+];
+for (const [index, [name, technologies]] of schoolSlots.entries()) {
+  projects.push({
+    id: `school-slot-${index + 3}`, category: 'school',
+    title: name, subtitle: 'Reserved for a real coursework project. Details will be added when ready.',
+    type: 'SCHOOL PROJECT', status: 'Project slot · not published', visual: 'browser',
+    tags: ['Placeholder'], technologies, placeholder: true,
+    overview: 'This is an empty project slot, not a completed project. The suggested stack can be changed to match the actual work.',
+    learning: 'Add a technical challenge, the approach you tried, and what the result taught you.',
+    contribution: '', cover: '', coverAlt: '', video: '', repo: '', live: '',
+  });
+}
+for (const project of projects) {
+  project.placeholder ??= true;
+  project.technologies ??= [];
+  project.cover ??= '';
+  project.coverAlt ??= '';
+  project.contribution ??= '';
+}
