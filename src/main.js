@@ -1,3 +1,4 @@
+import './scrapbook.js';
 import { projects } from './projects.js';
 const arrow = '<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg>';
 // Inline SVG keeps decorative symbols consistent across devices.
